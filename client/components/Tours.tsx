@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Tours() {
   return (
@@ -38,22 +39,6 @@ function Tours() {
           <strong>Duration: 1.5 Hours</strong>
         </p>
       </div>
-      <div className="gulf-tour">
-        <h3>Gulf</h3>
-        <p>
-          Designed to experience the very best of Auckland 's inner Hauraki
-          Marine Park, your guide takes you to arguably the best islands around.
-          Motuihe Island provides white sand beach backdrops with time for a
-          swim & views out into the Pacific Ocean. Follow Rangitoto Island's 600
-          year old volcanic coastline riding past the iconic Rangitoto baches
-          with a stop at the jaw-dropping Rangitoto Sand Bar for true, 360
-          degree views of Volcano Peaks & City Skyline. An action packed trip
-          guaranteed to be good for the soul.
-        </p>
-        <p>
-          <strong>Duration: 3.5 Hours</strong>
-        </p>
-      </div>
       <div className="waiheke-tour">
         <h3>Waiheke</h3>
         <p>
@@ -65,6 +50,22 @@ function Tours() {
           bite to eat! Once you've enjoyed Waiheke's visitor hotspot, we jump
           back on our jetski's for a scenic ride back enjoying the approach to
           Auckland City.
+        </p>
+        <p>
+          <strong>Duration: 3.5 Hours</strong>
+        </p>
+      </div>
+      <div className="gulf-tour">
+        <h3>Gulf</h3>
+        <p>
+          Designed to experience the very best of Auckland 's inner Hauraki
+          Marine Park, your guide takes you to arguably the best islands around.
+          Motuihe Island provides white sand beach backdrops with time for a
+          swim & views out into the Pacific Ocean. Follow Rangitoto Island's 600
+          year old volcanic coastline riding past the iconic Rangitoto baches
+          with a stop at the jaw-dropping Rangitoto Sand Bar for true, 360
+          degree views of Volcano Peaks & City Skyline. An action packed trip
+          guaranteed to be good for the soul.
         </p>
         <p>
           <strong>Duration: 3.5 Hours</strong>
@@ -124,8 +125,7 @@ function Tours() {
             </strong>
           </li>
         </ul>
-        {/* Link to FAQ page */}
-        <p>FAQ's + Terms and Conditions here</p>
+        <Link to="/about">FAQ's + Terms & Conditions</Link>
       </div>
     </>
   )
