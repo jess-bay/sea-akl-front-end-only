@@ -9,10 +9,6 @@ import Home from './components/Home'
 import React from 'react'
 import AboutFAQ from './components/AboutFAQ'
 
-interface Props {
-  darkTheme: boolean
-}
-
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>

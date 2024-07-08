@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 function About() {
+  const [expandedIndex, setExpandedIndex] = useState<number | null>(null)
+
   const FAQs = [
     {
       question: 'Is There A Bond To Pay?',
@@ -13,6 +15,15 @@ function About() {
         "Sea Auckland is located with Bayswater Marina, on Auckland's North Shore. Being located in the marina allows our customers a smooth & effortless departure & return without battling beaches, boat ramps & breaking shore waves. Arrive by ferry (10 minute ferry ride) or car (25 minute drive). ",
     },
   ]
+
+  const toggleAnswer = (index: number) => {
+    if (expandedIndex === index) {
+      setExpandedIndex(null)
+    } else {
+      setExpandedIndex(index)
+    }
+  }
+
   return (
     <>
       <div>
@@ -52,7 +63,22 @@ function About() {
           precious time, energy & resources.
         </p>
       </div>
-      <div className="faq-section"></div>
+      <div className="faq-section">
+        <h1>FAQ's</h1>
+        {FAQs.map((faq, index) => (
+          <div key={index} className="faq-item">
+            <div className="faq-question" onClick={() => toggleAnswer(index)}>
+              {faq.question}
+              <span className="arrow">
+                {expandedIndex === index ? '▼' : '▲'}
+              </span>
+            </div>
+            {expandedIndex === index && (
+              <div className="faq-answer">{faq.answer}</div>
+            )}
+          </div>
+        ))}
+      </div>
     </>
   )
 }

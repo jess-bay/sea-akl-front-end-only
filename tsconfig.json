@@ -4,6 +4,10 @@
     "lib": ["dom", "esnext"],
     "jsx": "react",
     "strict": true,
-    "esModuleInterop": true
-  }
+    "esModuleInterop": true,
+    "outDir": "./dist"
+  },
+  "include": [
+    "./client/**/*" 
+  ]
 }
