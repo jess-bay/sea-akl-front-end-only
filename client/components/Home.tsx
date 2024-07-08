@@ -25,26 +25,56 @@ function Home() {
       <div>
         {/* Link the following to the booking site */}
         <h1>JET SKI ADVENTURES</h1>
-        <div className="city-tour-homepage">
-          <h1>City</h1>
-          <p>Duration 1 Hour</p>
-        </div>
-        <div className="harbour-tour-homepage">
-          <h1>Harbour</h1>
-          <p>Duration 1.5 Hours</p>
-        </div>
-        <div className="Waiheke-tour-homepage">
-          <h1>Waiheke</h1>
-          <p>Duration 3.5 Hours</p>
-        </div>
-        <div className="gulf-tour-homepage">
-          <h1>Gulf</h1>
-          <p>Duration 3.5 Hours</p>
-        </div>
-        <div className="sunset-tour-homepage">
-          <h1>Sunset</h1>
-          <p>Duration 1 Hour</p>
-        </div>
+        <a
+          href="https://book.sea-auckland.nz/book/city-adventure/1#rvrd-1"
+          target="_blank"
+          className="city-tour-anchor"
+        >
+          <div className="city-tour-homepage">
+            <h1>City</h1>
+            <p>Duration 1 Hour</p>
+          </div>
+        </a>
+        <a
+          href="https://book.sea-auckland.nz/book/harbour-adventure/2#rvrd-1"
+          target="_blank"
+          className="harbour-tour-anchor"
+        >
+          <div className="harbour-tour-homepage">
+            <h1>Harbour</h1>
+            <p>Duration 1.5 Hours</p>
+          </div>
+        </a>
+        <a
+          href="https://book.sea-auckland.nz/book/waiheke-adventure/3#rvrd-1"
+          target="_blank"
+          className="waiheke-tour-anchor"
+        >
+          <div className="Waiheke-tour-homepage">
+            <h1>Waiheke</h1>
+            <p>Duration 3.5 Hours</p>
+          </div>
+        </a>
+        <a
+          href="https://book.sea-auckland.nz/book/gulf-adventure/4#rvrd-1"
+          target="_blank"
+          className="gulf-tour-anchor"
+        >
+          <div className="gulf-tour-homepage">
+            <h1>Gulf</h1>
+            <p>Duration 3.5 Hours</p>
+          </div>
+        </a>
+        <a
+          href="https://book.sea-auckland.nz/book/city-sunset-adventure/5#rvrd-1"
+          target="_blank"
+          className="sunset-tour-anchor"
+        >
+          <div className="sunset-tour-homepage">
+            <h1>Sunset</h1>
+            <p>Duration 1 Hour</p>
+          </div>
+        </a>
         {/* Link this next one to the gift card checkout */}
         <div className="giftcard-homepage">
           <h1>Gift Card</h1>
