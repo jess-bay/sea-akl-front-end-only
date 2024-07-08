@@ -9,7 +9,11 @@ function Nav() {
           <li>
             <Link to="/">Home</Link>
           </li>
-          <li>Book Now</li>
+          <li>
+            <Link to="https://book.sea-auckland.nz/" target="_blank">
+              Book Now
+            </Link>
+          </li>
           <li>
             <Link to="/about">About</Link>
           </li>
@@ -17,7 +21,9 @@ function Nav() {
             <Link to="/tours">Tours</Link>
           </li>
           <li>
-            <Link to="/giftcards">Gift Cards</Link>
+            <Link to="https://book.sea-auckland.nz/card/create" target="_blank">
+              Gift Cards
+            </Link>
           </li>
           <li>
             <Link to="/pestfree">Pest Free</Link>
