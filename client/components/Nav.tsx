@@ -8,7 +8,17 @@ function Nav() {
 
   return (
     <>
-      <nav style={{ backgroundColor: '#e9f0ff', padding: '10px' }}>
+      <nav
+        style={{
+          backgroundColor: '#e9f0ff',
+          padding: '10px',
+          width: '100%',
+          position: 'fixed',
+          top: 0,
+          left: 0,
+          zIndex: 1000,
+        }}
+      >
         <ul
           style={{
             listStyleType: 'none',
