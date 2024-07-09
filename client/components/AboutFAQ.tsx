@@ -94,7 +94,7 @@ function About() {
 
   return (
     <>
-      <div>
+      <div style={{ padding: '20px' }}>
         <h1>Sea Auckland's Purpose</h1>
         <p>We enjoy the water & want you to as well.</p>
         <p>
@@ -113,7 +113,7 @@ function About() {
           & Hauraki Gulf
         </p>
       </div>
-      <div>
+      <div style={{ padding: '20px' }}>
         <h1>Sustainability</h1>
         <p>Working with nature, as nature is why we exist.</p>
         <p>
@@ -131,16 +131,34 @@ function About() {
           precious time, energy & resources.
         </p>
       </div>
-      <div className="faq-section">
+      <div className="faq-section" style={{ padding: '20px' }}>
         <h1>FAQ's</h1>
         {FAQs.map((faq, index) => (
-          <div key={index} className="faq-item">
-            <div className="faq-question" onClick={() => toggleAnswer(index)}>
+          <div
+            key={index}
+            className="faq-item"
+            style={{
+              marginBottom: '10px',
+              border: '1px solid #ccc',
+              borderRadius: '5px',
+            }}
+          >
+            <div
+              className="faq-question"
+              onClick={() => toggleAnswer(index)}
+              style={{
+                padding: '10px',
+                cursor: 'pointer',
+                backgroundColor: '#f7f7f7',
+              }}
+            >
               {faq.question}
-              <span>{expandedIndex === index ? '▼' : '▲'}</span>
+              <span style={{ float: 'right' }}>
+                {expandedIndex === index ? '▼' : '▲'}
+              </span>
             </div>
             {expandedIndex === index && (
-              <div className="faq-answer">
+              <div className="faq-answer" style={{ padding: '10px' }}>
                 {faq.answer.map((paragraph, i) => (
                   <p key={i}>{paragraph}</p>
                 ))}
