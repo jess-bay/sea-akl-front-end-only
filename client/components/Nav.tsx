@@ -2,31 +2,60 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 function Nav() {
+  const navLinkStyle = {
+    color: '#FFF',
+    textDecoration: 'none',
+  }
+
   return (
     <>
-      <nav>
-        <ul>
+      <nav style={{ backgroundColor: '#007BFF', padding: '10px' }}>
+        <ul
+          style={{
+            listStyleType: 'none',
+            display: 'flex',
+            justifyContent: 'space-around',
+            padding: '0',
+            margin: '0',
+          }}
+        >
           <li>
-            <Link to="/">Home</Link>
+            <Link to="/" style={navLinkStyle}>
+              Home
+            </Link>
           </li>
           <li>
-            <Link to="https://book.sea-auckland.nz/" target="_blank">
+            <Link
+              to="https://book.sea-auckland.nz/"
+              target="_blank"
+              style={navLinkStyle}
+            >
               Book Now
             </Link>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <Link to="/about" style={navLinkStyle}>
+              About
+            </Link>
           </li>
           <li>
-            <Link to="/tours">Tours</Link>
+            <Link to="/tours" style={navLinkStyle}>
+              Tours
+            </Link>
           </li>
           <li>
-            <Link to="https://book.sea-auckland.nz/card/create" target="_blank">
+            <Link
+              to="https://book.sea-auckland.nz/card/create"
+              target="_blank"
+              style={navLinkStyle}
+            >
               Gift Cards
             </Link>
           </li>
           <li>
-            <Link to="/pestfree">Pest Free</Link>
+            <Link to="/pestfree" style={navLinkStyle}>
+              Pest Free
+            </Link>
           </li>
         </ul>
       </nav>
