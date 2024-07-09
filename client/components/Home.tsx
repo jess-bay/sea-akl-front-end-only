@@ -2,9 +2,56 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 function Home() {
+  const tourData = [
+    {
+      name: 'City',
+      duration: '1 Hour',
+      link: 'https://book.sea-auckland.nz/book/city-adventure/1#rvrd-1',
+      moreInfoLink: '/tours#city',
+    },
+    {
+      name: 'Harbour',
+      duration: '1.5 Hours',
+      link: 'https://book.sea-auckland.nz/book/harbour-adventure/2#rvrd-1',
+      moreInfoLink: '/tours#harbour',
+    },
+    {
+      name: 'Waiheke',
+      duration: '3.5 Hours',
+      link: 'https://book.sea-auckland.nz/book/waiheke-adventure/3#rvrd-1',
+      moreInfoLink: '/tours#waiheke',
+    },
+    {
+      name: 'Gulf',
+      duration: '3.5 Hours',
+      link: 'https://book.sea-auckland.nz/book/gulf-adventure/4#rvrd-1',
+      moreInfoLink: '/tours#gulf',
+    },
+    {
+      name: 'Sunset',
+      duration: '1 Hour',
+      link: 'https://book.sea-auckland.nz/book/city-sunset-adventure/5#rvrd-1',
+      moreInfoLink: '/tours#sunset',
+    },
+  ]
+
+  const buttonStyle = {
+    backgroundColor: '#007BFF',
+    color: '#FFF',
+    border: 'none',
+    padding: '10px 20px',
+    margin: '5px',
+    borderRadius: '5px',
+    cursor: 'pointer',
+  }
+
+  const linkStyle = {
+    textDecoration: 'none',
+  }
+
   return (
     <>
-      <div>
+      <div style={{ padding: '20px', textAlign: 'center' }}>
         <h1>Welcome to Auckland</h1>
         <h3>The Jewel of the South Pacific</h3>
         <p>
@@ -22,66 +69,38 @@ function Home() {
         </p>
       </div>
       <br />
-      <div>
-        {/* Link the following to the booking site */}
+      <div style={{ padding: '20px', textAlign: 'center' }}>
         <h1>JET SKI ADVENTURES</h1>
-        <a
-          href="https://book.sea-auckland.nz/book/city-adventure/1#rvrd-1"
-          target="_blank"
-          className="city-tour-anchor"
-        >
-          <div className="city-tour-homepage">
-            <h1>City</h1>
-            <p>Duration 1 Hour</p>
+        {tourData.map((tour, index) => (
+          <div
+            key={index}
+            style={{
+              marginBottom: '20px',
+              border: '1px solid #ccc',
+              padding: '50px',
+              borderRadius: '5px',
+              marginLeft: '60px',
+              marginRight: '60px',
+            }}
+          >
+            <h2>{tour.name}</h2>
+            <p>{tour.duration}</p>
+            <a href={tour.link} target="_blank" style={linkStyle}>
+              <button style={buttonStyle}>Book Now</button>
+            </a>
+            <Link to={tour.moreInfoLink} style={linkStyle}>
+              <button style={buttonStyle}>More Information</button>
+            </Link>
           </div>
-        </a>
+        ))}
+        <h1>Gift Card</h1>
         <a
-          href="https://book.sea-auckland.nz/book/harbour-adventure/2#rvrd-1"
+          href="https://book.sea-auckland.nz/card/create"
           target="_blank"
-          className="harbour-tour-anchor"
+          style={linkStyle}
         >
-          <div className="harbour-tour-homepage">
-            <h1>Harbour</h1>
-            <p>Duration 1.5 Hours</p>
-          </div>
+          <button style={buttonStyle}>Create a Gift Card!</button>
         </a>
-        <a
-          href="https://book.sea-auckland.nz/book/waiheke-adventure/3#rvrd-1"
-          target="_blank"
-          className="waiheke-tour-anchor"
-        >
-          <div className="Waiheke-tour-homepage">
-            <h1>Waiheke</h1>
-            <p>Duration 3.5 Hours</p>
-          </div>
-        </a>
-        <a
-          href="https://book.sea-auckland.nz/book/gulf-adventure/4#rvrd-1"
-          target="_blank"
-          className="gulf-tour-anchor"
-        >
-          <div className="gulf-tour-homepage">
-            <h1>Gulf</h1>
-            <p>Duration 3.5 Hours</p>
-          </div>
-        </a>
-        <a
-          href="https://book.sea-auckland.nz/book/city-sunset-adventure/5#rvrd-1"
-          target="_blank"
-          className="sunset-tour-anchor"
-        >
-          <div className="sunset-tour-homepage">
-            <h1>Sunset</h1>
-            <p>Duration 1 Hour</p>
-          </div>
-        </a>
-        {/* Link this next one to the gift card checkout */}
-        <div className="giftcard-homepage">
-          <h1>Gift Card</h1>
-          <p>
-            Click to buy a gift card for your friends, family or co-workers!
-          </p>
-        </div>
       </div>
     </>
   )
