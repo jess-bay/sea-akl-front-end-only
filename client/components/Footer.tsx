@@ -47,6 +47,13 @@ function Footer() {
             </a>
           </h3>
         </div>
+        <div>
+          <img
+            src="client/public/pestfreewarrant.png"
+            alt="Pest Free Warrant"
+            style={{ height: '300px' }}
+          />
+        </div>
       </div>
     </>
   )
