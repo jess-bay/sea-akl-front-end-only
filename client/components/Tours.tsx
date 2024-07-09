@@ -72,7 +72,7 @@ function Tours() {
         </p>
       </div>
       <div className="sunset-tour">
-        <h3></h3>
+        <h3>Sunset</h3>
         <p>
           The Waitemata Harbour shows a different side once the sun goes down &
           the city lights begin to wake. You will pilot your own jetskis across
