@@ -12,11 +12,14 @@ function Footer() {
       {/* API for map to show location */}
       <div
         style={{
-          backgroundColor: '#e9f0ff',
+          backgroundImage: 'url(client/public/wave.png)',
           color: '#000',
           padding: '20px',
           textAlign: 'center',
           margin: '0',
+          width: '100%',
+          bottom: 0,
+          left: 0,
         }}
       >
         <div style={{ marginBottom: '10px' }}>
