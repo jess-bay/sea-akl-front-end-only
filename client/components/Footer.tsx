@@ -1,4 +1,3 @@
-import React from 'react'
 import { CSSProperties } from 'react'
 
 function Footer() {
@@ -39,7 +38,6 @@ function Footer() {
             <a href="tel:+64204732255">+64 20 4 SEAAKL</a>
           </h3>
         </div>
-        {/* Link to the pdf of t's and c's */}
         <div>
           <h3>
             {' '}
