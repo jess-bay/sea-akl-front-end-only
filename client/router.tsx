@@ -8,6 +8,7 @@ import Home from './components/Home.tsx'
 import AboutFAQ from './components/AboutFAQ.tsx'
 import Tours from './components/Tours.tsx'
 import PestFree from './components/PestFree.tsx'
+import Reviews from './components/Reviews.tsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -16,6 +17,7 @@ const router = createBrowserRouter(
       <Route path="/about" element={<AboutFAQ />} />
       <Route path="/tours" element={<Tours />} />
       <Route path="/pestfree" element={<PestFree />} />
+      <Route path="/reviews" element={<Reviews />} />
     </Route>
   )
 )

@@ -56,6 +56,11 @@ function Nav() {
               Pest Free
             </Link>
           </li>
+          <li>
+            <Link to="/reviews" style={navLinkStyle}>
+              Reviews
+            </Link>
+          </li>
         </ul>
       </nav>
     </>
