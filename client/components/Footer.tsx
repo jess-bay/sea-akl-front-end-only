@@ -12,8 +12,8 @@ function Footer() {
       {/* API for map to show location */}
       <div
         style={{
-          backgroundColor: '#007BFF',
-          color: '#FFF',
+          backgroundColor: '#e9f0ff',
+          color: '#000',
           padding: '20px',
           textAlign: 'center',
           margin: '0',

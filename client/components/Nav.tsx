@@ -2,13 +2,13 @@ import { Link } from 'react-router-dom'
 
 function Nav() {
   const navLinkStyle = {
-    color: '#FFF',
+    color: '#000',
     textDecoration: 'none',
   }
 
   return (
     <>
-      <nav style={{ backgroundColor: '#007BFF', padding: '10px' }}>
+      <nav style={{ backgroundColor: '#e9f0ff', padding: '10px' }}>
         <ul
           style={{
             listStyleType: 'none',
