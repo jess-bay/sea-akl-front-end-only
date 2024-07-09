@@ -2,16 +2,35 @@ function PestFree() {
   return (
     <>
       <div>
-        <h1>Pest Free Hauraki Gulf</h1>
-        <h3>
-          We follow and support the biosecurity requirements set out by Auckland
-          Council and Department of Conservation. Therefore, we ask all
-          passengers thoroughly check and clean their gear for pests prior to
-          arrival. For more information click{' '}
-          <a href="https://www.aucklandcouncil.govt.nz/environment/what-you-can-do-for-environment/Pages/visiting-hauraki-gulf-islands.aspx">
-            here
-          </a>
-        </h3>
+        <div>
+          <h1>Pest Free Hauraki Gulf</h1>
+          <h3>
+            We follow and support the biosecurity requirements set out by
+            Auckland Council and Department of Conservation. Therefore, we ask
+            all passengers thoroughly check and clean their gear for pests prior
+            to arrival. For more information click{' '}
+            <a href="https://www.aucklandcouncil.govt.nz/environment/what-you-can-do-for-environment/Pages/visiting-hauraki-gulf-islands.aspx">
+              here
+            </a>
+          </h3>
+        </div>
+        <div>
+          <img
+            src="client/public/pestfree1.png"
+            alt="Pest Free Hauraki Notice"
+            style={{ margin: '10px' }}
+          />
+          <img
+            src="client/public/pestfree2.png"
+            alt="Pest Free Hauraki Notice"
+            style={{ margin: '10px' }}
+          />
+          <img
+            src="client/public/pestfreesticker.png"
+            alt="Pest Free Sticker On Jet Ski"
+            style={{ margin: '10px' }}
+          />
+        </div>
       </div>
       <div>
         <h4>Why You Need To Check Your Gear:</h4>
