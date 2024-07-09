@@ -1,7 +1,8 @@
 import React from 'react'
+import { CSSProperties } from 'react'
 
 function Footer() {
-  const footerStyle = {
+  const footerStyle: CSSProperties = {
     color: '#FFF',
     textDecoration: 'underline',
   }
@@ -16,6 +17,7 @@ function Footer() {
           color: '#FFF',
           padding: '20px',
           textAlign: 'center',
+          margin: '0',
         }}
       >
         <div style={{ marginBottom: '10px' }}>
