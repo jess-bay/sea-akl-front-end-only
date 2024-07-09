@@ -1,4 +1,4 @@
-import { SetStateAction, useState } from 'react'
+import { useState } from 'react'
 
 function Reviews() {
   const [isHovered, setIsHovered] = useState<number | null>(null)
