@@ -19,7 +19,7 @@ function PestFree() {
   }
 
   const imageStyle = {
-    backgroundColor: 'rgba(255, 255, 255, 0.8)',
+    backgroundColor: 'rgba(255, 255, 255, 0.5)',
     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
     padding: '20px',
   }
@@ -35,7 +35,7 @@ function PestFree() {
   const textStyle: CSSProperties = {
     flex: 1,
     marginRight: '20px',
-    backgroundColor: 'white',
+    backgroundColor: 'rgba(255, 255, 255, 0.8)',
     padding: '1.8%',
   }
 

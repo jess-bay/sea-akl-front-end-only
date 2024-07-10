@@ -56,7 +56,7 @@ function Home() {
     justifyContent: 'space-between',
     alignItems: 'center',
     padding: '20px',
-    backgroundColor: 'rgba(255, 255, 255, 0.8)',
+    backgroundColor: 'rgba(255, 255, 255, 0.5)',
     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
     maxWidth: '50%',
     margin: '20px auto',
@@ -65,7 +65,7 @@ function Home() {
   const tourTextStyle: CSSProperties = {
     flex: 1,
     marginRight: '20px',
-    backgroundColor: 'white',
+    backgroundColor: 'rgba(255, 255, 255, 0.8)',
     padding: '1.8%',
   }
 

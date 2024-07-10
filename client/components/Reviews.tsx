@@ -46,8 +46,8 @@ function Reviews() {
   }
 
   const buttonStyle: CSSProperties = {
-    backgroundColor: '#007BFF',
-    color: '#FFF',
+    backgroundColor: 'rgba(255, 255, 255, 0.8)',
+    color: '#000',
     border: 'none',
     padding: '10px 20px',
     margin: '50px',
@@ -72,7 +72,7 @@ function Reviews() {
         style={{
           ...headingStyle,
           marginTop: '100px',
-          backgroundColor: 'rgba(255, 255, 255)',
+          backgroundColor: 'rgba(255, 255, 255, 0.8)',
         }}
       >
         <h1>Check Out Some Of Our Customer Testimonials!</h1>
@@ -83,7 +83,14 @@ function Reviews() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <button style={buttonStyle}>Leave Us A Review On Google Here!</button>
+          <button style={buttonStyle}>
+            Leave Us A Review On <span style={{ color: 'blue' }}>G</span>
+            <span style={{ color: 'red' }}>o</span>
+            <span style={{ color: 'gold' }}>o</span>
+            <span style={{ color: 'blue' }}>g</span>
+            <span style={{ color: 'green' }}>l</span>
+            <span style={{ color: 'red' }}>e</span> Here!
+          </button>
         </a>
       </div>
       <div
