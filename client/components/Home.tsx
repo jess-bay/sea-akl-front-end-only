@@ -1,3 +1,4 @@
+import { CSSProperties } from 'react'
 import { Link } from 'react-router-dom'
 
 function Home() {
@@ -34,7 +35,7 @@ function Home() {
     },
   ]
 
-  const buttonStyle = {
+  const buttonStyle: CSSProperties = {
     backgroundColor: '#007BFF',
     color: '#FFF',
     border: 'none',
@@ -44,18 +45,38 @@ function Home() {
     cursor: 'pointer',
   }
 
-  const linkStyle = {
+  const linkStyle: CSSProperties = {
     textDecoration: 'none',
+    color: '#007BFF',
+  }
+
+  const tourContainerStyle: CSSProperties = {
+    marginBottom: '20px',
+    border: '1px solid #ccc',
+    padding: '50px',
+    borderRadius: '5px',
+    marginLeft: '200px',
+    marginRight: '200px',
+    backgroundColor: 'rgba(255, 255, 255, 0.8)',
+  }
+
+  const tourHeaderStyle: CSSProperties = {
+    backgroundColor: 'rgba(255, 255, 255, 0.8)',
+    marginLeft: '200px',
+    marginRight: '200px',
+    marginTop: '100px',
+    padding: '20px',
+    textAlign: 'center',
   }
 
   return (
     <>
-      <div style={{ padding: '20px', textAlign: 'center' }}>
+      <div style={tourHeaderStyle}>
         <h1>Welcome to Auckland</h1>
         <h3>The Jewel of the South Pacific</h3>
         <p>
-          Beyond Auckland's bars and restauirants, shopping & entertainment,
-          lies the world famous Tikapa Moana/Hauraki Gulf Marine Park.
+          Beyond Auckland's bars and restaurants, shopping & entertainment, lies
+          the world famous Tikapa Moana/Hauraki Gulf Marine Park.
         </p>
         <p>
           Sea Auckland's boutique guided jet ski adventures take you further
@@ -67,21 +88,10 @@ function Home() {
           see Auckland at it's best.
         </p>
       </div>
-      <br />
-      <div style={{ padding: '20px', textAlign: 'center' }}>
-        <h1>JET SKI ADVENTURES</h1>
+      <div style={{ textAlign: 'center' }}>
+        <h1 style={tourHeaderStyle}>JET SKI ADVENTURES</h1>
         {tourData.map((tour, index) => (
-          <div
-            key={index}
-            style={{
-              marginBottom: '20px',
-              border: '1px solid #ccc',
-              padding: '50px',
-              borderRadius: '5px',
-              marginLeft: '60px',
-              marginRight: '60px',
-            }}
-          >
+          <div key={index} style={tourContainerStyle}>
             <h2>{tour.name}</h2>
             <p>{tour.duration}</p>
             <a href={tour.link} target="_blank" style={linkStyle}>
