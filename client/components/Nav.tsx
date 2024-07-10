@@ -29,7 +29,7 @@ function Nav() {
           }}
         >
           <li>
-            <Link to="/" style={navLinkStyle}>
+            <Link to="/" style={navLinkStyle} className="nav-link">
               Home
             </Link>
           </li>
@@ -38,17 +38,18 @@ function Nav() {
               to="https://book.sea-auckland.nz/"
               target="_blank"
               style={navLinkStyle}
+              className="nav-link"
             >
               Book Now
             </Link>
           </li>
           <li>
-            <Link to="/about" style={navLinkStyle}>
+            <Link to="/about" style={navLinkStyle} className="nav-link">
               About
             </Link>
           </li>
           <li>
-            <Link to="/tours" style={navLinkStyle}>
+            <Link to="/tours" style={navLinkStyle} className="nav-link">
               Tours
             </Link>
           </li>
@@ -57,17 +58,18 @@ function Nav() {
               to="https://book.sea-auckland.nz/card/create"
               target="_blank"
               style={navLinkStyle}
+              className="nav-link"
             >
               Gift Cards
             </Link>
           </li>
           <li>
-            <Link to="/pestfree" style={navLinkStyle}>
+            <Link to="/pestfree" style={navLinkStyle} className="nav-link">
               Pest Free
             </Link>
           </li>
           <li>
-            <Link to="/reviews" style={navLinkStyle}>
+            <Link to="/reviews" style={navLinkStyle} className="nav-link">
               Reviews
             </Link>
           </li>
