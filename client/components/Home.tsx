@@ -43,6 +43,7 @@ function Home() {
     margin: '5px',
     borderRadius: '5px',
     cursor: 'pointer',
+    fontSize: '2rem',
   }
 
   const linkStyle: CSSProperties = {
@@ -50,66 +51,89 @@ function Home() {
     color: '#007BFF',
   }
 
-  const tourContainerStyle: CSSProperties = {
-    marginBottom: '20px',
-    border: '1px solid #ccc',
-    padding: '50px',
-    borderRadius: '5px',
-    marginLeft: '200px',
-    marginRight: '200px',
+  const tourContainerStyle = {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    padding: '20px',
     backgroundColor: 'rgba(255, 255, 255, 0.8)',
+    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+    maxWidth: '50%',
+    margin: '20px auto',
   }
 
-  const tourHeaderStyle: CSSProperties = {
-    backgroundColor: 'rgba(255, 255, 255, 0.8)',
-    marginLeft: '200px',
-    marginRight: '200px',
-    marginTop: '100px',
-    padding: '20px',
+  const tourTextStyle = {
+    flex: 1,
+    marginRight: '20px',
+    backgroundColor: 'white',
+    padding: '1.8%',
+  }
+
+  const headingStyle: CSSProperties = {
     textAlign: 'center',
+    borderTop: '4px solid black',
+    paddingTop: '10px',
+    maxWidth: '40%',
+    margin: '0 auto',
   }
 
   return (
     <>
-      <div style={tourHeaderStyle}>
-        <h1>Welcome to Auckland</h1>
-        <h3>The Jewel of the South Pacific</h3>
-        <p>
-          Beyond Auckland's bars and restaurants, shopping & entertainment, lies
-          the world famous Tikapa Moana/Hauraki Gulf Marine Park.
-        </p>
-        <p>
-          Sea Auckland's boutique guided jet ski adventures take you further
-          than most think possible, from the Auckland Harbour Bridge, to white
-          sand beaches & nature reserves of the Gulf Islands.
-        </p>
-        <p>
-          Your New Zealand experience is important to us & we wish for you to
-          see Auckland at it's best.
-        </p>
+      <div
+        style={{
+          ...tourContainerStyle,
+          marginTop: '100px',
+          marginBottom: '100px',
+        }}
+      >
+        <div style={tourTextStyle}>
+          <h1>Welcome to Auckland</h1>
+          <h3>The Jewel of the South Pacific</h3>
+          <p>
+            Beyond Auckland's bars and restaurants, shopping & entertainment,
+            lies the world famous Tikapa Moana/Hauraki Gulf Marine Park.
+          </p>
+          <p>
+            Sea Auckland's boutique guided jet ski adventures take you further
+            than most think possible, from the Auckland Harbour Bridge, to white
+            sand beaches & nature reserves of the Gulf Islands.
+          </p>
+          <p>
+            Your New Zealand experience is important to us & we wish for you to
+            see Auckland at it's best.
+          </p>
+        </div>
       </div>
-      <div style={{ textAlign: 'center' }}>
-        <h1 style={tourHeaderStyle}>JET SKI ADVENTURES</h1>
-        {tourData.map((tour, index) => (
-          <div key={index} style={tourContainerStyle}>
-            <h2>{tour.name}</h2>
-            <p>{tour.duration}</p>
-            <a href={tour.link} target="_blank" style={linkStyle}>
-              <button style={buttonStyle}>Book Now</button>
+      <div>
+        <h1 style={headingStyle}>JET SKI ADVENTURES</h1>
+        <div>
+          {tourData.map((tour, index) => (
+            <div key={index} style={tourContainerStyle}>
+              <div style={tourTextStyle}>
+                <h3>{tour.name}</h3>
+                <p>{tour.duration}</p>
+                <a href={tour.link} target="_blank" style={linkStyle}>
+                  <button style={buttonStyle}>Book Now</button>
+                </a>
+                <Link to={tour.moreInfoLink} style={linkStyle}>
+                  <button style={buttonStyle}>More Information</button>
+                </Link>
+              </div>
+            </div>
+          ))}
+        </div>
+        <div style={tourContainerStyle}>
+          <div style={tourTextStyle}>
+            <h3>Gift Card</h3>
+            <a
+              href="https://book.sea-auckland.nz/card/create"
+              target="_blank"
+              style={linkStyle}
+            >
+              <button style={buttonStyle}>Create a Gift Card!</button>
             </a>
-            <Link to={tour.moreInfoLink} style={linkStyle}>
-              <button style={buttonStyle}>More Information</button>
-            </Link>
           </div>
-        ))}
-        <h1>Gift Card</h1>
-        <a
-          href="https://book.sea-auckland.nz/card/create"
-          target="_blank"
-          style={linkStyle}
-        >
-          <button style={buttonStyle}>Create a Gift Card!</button>
-        </a>
+        </div>
       </div>
     </>
   )
