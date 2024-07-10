@@ -8,6 +8,10 @@ function App() {
     display: 'flex',
     flexDirection: 'column',
     minHeight: '100vh',
+    backgroundImage: 'url(client/public/background.png)',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    backgroundAttachment: 'fixed',
   }
 
   const contentStyle: CSSProperties = {
@@ -16,7 +20,7 @@ function App() {
 
   return (
     <>
-      <div style={containerStyle}>
+      <div style={containerStyle} className="bg-container">
         <header>
           <Nav />
         </header>
