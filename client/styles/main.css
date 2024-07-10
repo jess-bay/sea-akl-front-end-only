@@ -1,12 +1,19 @@
+body {
+  font-family: 'Quicksand', Arial;
+}
+
 h1 {
   font-size: 5rem;
 }
 
-p,
-h1,
-h2,
-h3,
-h4,
-h5 {
-  text-align: center;
+h3 {
+  font-size: 3rem;
+}
+
+p {
+  font-size: 2rem;
+}
+
+li {
+  font-size: 2rem;
 }
