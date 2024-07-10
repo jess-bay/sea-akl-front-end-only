@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { CSSProperties, useState } from 'react'
 
 function About() {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null)
@@ -92,55 +92,87 @@ function About() {
     }
   }
 
+  const containerStyle: CSSProperties = {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    padding: '20px',
+    backgroundColor: 'rgba(255, 255, 255, 0.8)',
+    boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+    maxWidth: '50%',
+    margin: '20px auto',
+  }
+
+  const headingStyle: CSSProperties = {
+    textAlign: 'center',
+    borderTop: '4px solid black',
+    paddingTop: '10px',
+    maxWidth: '40%',
+    margin: '0 auto',
+  }
+
+  const textStyle: CSSProperties = {
+    flex: 1,
+    marginRight: '20px',
+    backgroundColor: 'white',
+    padding: '1.8%',
+  }
+
   return (
     <>
-      <div style={{ padding: '20px' }}>
-        <h1>Sea Auckland's Purpose</h1>
-        <p>We enjoy the water & want you to as well.</p>
-        <p>
-          We saw an opportunity to provide visitors & kiwi's the unique chance
-          to blend the boundaries of recreational adventure & environmentally
-          conscious tourism.
-        </p>
-        <p>
-          The Auckland harbour is complex with reefs, rocks, speed zones & rules
-          of the sea. By providing guided jet ski adventures, we ensure you
-          maximise your riding time without needing to worry "Where am I now?"
-        </p>
-        <p>
-          Sea Auckland's promise to you is our adventures provide you with the
-          best value for money when it comes to exploring the Waitemata Harbour
-          & Hauraki Gulf
-        </p>
+      <div style={{ ...containerStyle, marginTop: '100px' }}>
+        <div style={textStyle}>
+          <h1>Sea Auckland's Purpose</h1>
+          <p>We enjoy the water & want you to as well.</p>
+          <p>
+            We saw an opportunity to provide visitors & kiwi's the unique chance
+            to blend the boundaries of recreational adventure & environmentally
+            conscious tourism.
+          </p>
+          <p>
+            The Auckland harbour is complex with reefs, rocks, speed zones &
+            rules of the sea. By providing guided jet ski adventures, we ensure
+            you maximise your riding time without needing to worry "Where am I
+            now?"
+          </p>
+          <p>
+            Sea Auckland's promise to you is our adventures provide you with the
+            best value for money when it comes to exploring the Waitemata
+            Harbour & Hauraki Gulf
+          </p>
+        </div>
       </div>
-      <div style={{ padding: '20px' }}>
-        <h1>Sustainability</h1>
-        <p>Working with nature, as nature is why we exist.</p>
-        <p>
-          By practising kaitiakitanga (guardianship), we bring people into the
-          natural environment to witness its beauty, leaving & taking nothing
-          but memories, photos & appreciation.
-        </p>
-        <p>
-          We are visitors to The Waitemata Harbour & Hauraki Gulf, and wish to
-          advocate for their importance by bringing you to witness them.
-        </p>
-        <p>
-          Our fleet of modern Wave Runner Jet Ski's allow efficient, low impact
-          enjoyment, whilst our Bayswater Marina location, limits our use of
-          precious time, energy & resources.
-        </p>
+      <div style={containerStyle}>
+        <div style={textStyle}>
+          <h1>Sustainability</h1>
+          <p>Working with nature, as nature is why we exist.</p>
+          <p>
+            By practising kaitiakitanga (guardianship), we bring people into the
+            natural environment to witness its beauty, leaving & taking nothing
+            but memories, photos & appreciation.
+          </p>
+          <p>
+            We are visitors to The Waitemata Harbour & Hauraki Gulf, and wish to
+            advocate for their importance by bringing you to witness them.
+          </p>
+          <p>
+            Our fleet of modern Wave Runner Jet Ski's allow efficient, low
+            impact enjoyment, whilst our Bayswater Marina location, limits our
+            use of precious time, energy & resources.
+          </p>
+        </div>
       </div>
       <div className="faq-section" style={{ padding: '20px' }}>
-        <h1>FAQ's</h1>
+        <h1 style={headingStyle}>FAQ's</h1>
         {FAQs.map((faq, index) => (
           <div
             key={index}
             className="faq-item"
             style={{
-              marginBottom: '10px',
               border: '1px solid #ccc',
               borderRadius: '5px',
+              maxWidth: '50%',
+              margin: '0 auto',
             }}
           >
             <div
@@ -150,6 +182,9 @@ function About() {
                 padding: '10px',
                 cursor: 'pointer',
                 backgroundColor: '#f7f7f7',
+                fontSize: '2rem',
+                margin: '10px',
+                border: '2px solid blue',
               }}
             >
               {faq.question}
@@ -158,7 +193,14 @@ function About() {
               </span>
             </div>
             {expandedIndex === index && (
-              <div className="faq-answer" style={{ padding: '10px' }}>
+              <div
+                className="faq-answer"
+                style={{
+                  padding: '10px',
+                  backgroundColor: '#f7f7f7',
+                  margin: '10px',
+                }}
+              >
                 {faq.answer.map((paragraph, i) => (
                   <p key={i}>{paragraph}</p>
                 ))}
