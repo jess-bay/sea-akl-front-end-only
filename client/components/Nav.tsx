@@ -48,13 +48,7 @@ function Nav() {
             flexGrow: 1,
           }}
         >
-          <li>
-            {/* <img
-              src="client/public/logo.png"
-              alt="Sea Auckland Logo"
-              style={logoStyle}
-            /> */}
-          </li>
+          <li></li>
           <li>
             <Link to="/" style={navLinkStyle} className="nav-link">
               Home
@@ -72,7 +66,7 @@ function Nav() {
           </li>
           <li>
             <Link to="/about" style={navLinkStyle} className="nav-link">
-              About
+              About/FAQ
             </Link>
           </li>
           <li>

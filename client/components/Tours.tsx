@@ -211,7 +211,7 @@ function Tours() {
               </li>
             </ul>{' '}
             <Link to="/about" style={{ fontSize: '2rem', marginLeft: '40px' }}>
-              <strong>FAQ's + Terms & Conditions</strong>
+              <strong>Click Here To See Our FAQ's</strong>
             </Link>
           </div>
         </div>
