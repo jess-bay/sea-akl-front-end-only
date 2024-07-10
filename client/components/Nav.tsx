@@ -1,33 +1,60 @@
-import { Link } from 'react-router-dom'
+import { CSSProperties } from 'react'
+import { Link, NavLink } from 'react-router-dom'
 
 function Nav() {
   const navLinkStyle = {
     color: '#000',
     textDecoration: 'none',
+    padding: '10px 15px',
+    transition: 'color 0.3s ease',
+    marginRight: '150px',
+  }
+
+  const logoStyle: CSSProperties = {
+    height: '100px',
+    marginRight: '10px',
+    position: 'fixed',
   }
 
   return (
     <>
       <nav
         style={{
-          backgroundColor: '#e9f0ff',
-          padding: '10px',
+          backgroundColor: 'rgba(201, 238, 255, 0.8)',
+          padding: '50px',
           width: '100%',
-          position: 'fixed',
+          // position: 'fixed',
           top: 0,
           left: 0,
           zIndex: 1000,
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
         }}
       >
+        <img
+          src="client/public/logo.png"
+          alt="Sea Auckland Logo"
+          style={logoStyle}
+        />
         <ul
           style={{
             listStyleType: 'none',
             display: 'flex',
-            justifyContent: 'space-around',
+            justifyContent: 'center',
+            alignItems: 'center',
             padding: '0',
             margin: '0',
+            flexGrow: 1,
           }}
         >
+          <li>
+            {/* <img
+              src="client/public/logo.png"
+              alt="Sea Auckland Logo"
+              style={logoStyle}
+            /> */}
+          </li>
           <li>
             <Link to="/" style={navLinkStyle} className="nav-link">
               Home
