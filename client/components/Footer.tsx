@@ -2,12 +2,12 @@ import { CSSProperties } from 'react'
 
 function Footer() {
   const footerStyle: CSSProperties = {
-    color: '#FFF',
+    color: '#000',
     textDecoration: 'underline',
   }
 
   const footerContainerStyle: CSSProperties = {
-    backgroundImage: 'url(client/public/footer2.png)',
+    backgroundImage: 'url(client/public/wavepic.png)',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     color: '#000',
@@ -15,23 +15,26 @@ function Footer() {
     textAlign: 'center',
     margin: '0',
     width: '100%',
+    height: '500px',
     bottom: 0,
     left: 0,
     display: 'flex',
     alignItems: 'center',
+    position: 'relative',
     justifyContent: 'center',
     flexWrap: 'wrap',
   }
 
   const textContainerStyle: CSSProperties = {
-    flex: '1 1 50%',
-    marginBottom: '10px',
+    flex: '1 1 38%',
+    marginTop: 'auto',
     textAlign: 'right',
   }
 
   const imageContainerStyle: CSSProperties = {
     flex: '1 1 20%',
-    marginBottom: '10px',
+    marginBottom: '30px',
+    marginTop: 'auto',
     textAlign: 'left',
   }
 
@@ -44,7 +47,7 @@ function Footer() {
   return (
     <div style={footerContainerStyle}>
       <div style={textContainerStyle}>
-        <h3>
+        <h4>
           Send your questions to us:{' '}
           <a
             href="mailto:hello@sea-auckland.nz"
@@ -53,25 +56,25 @@ function Footer() {
           >
             hello@sea-auckland.nz
           </a>
-        </h3>
-        <h3>
+        </h4>
+        <h4>
           Hear About Special Tours First by{' '}
           <a href="" style={footerStyle}>
             Subscribing Here
           </a>
-        </h3>
-        <h3>
+        </h4>
+        <h4>
           Call Us For Anything Else:{' '}
           <a href="tel:+64204732255" style={footerStyle}>
             +64 20 4 SEAAKL
           </a>
-        </h3>
-        <h3>
+        </h4>
+        <h4>
           Click Here To View The{' '}
           <a href="client/public/tcs.pdf" target="_blank" style={footerStyle}>
             Full T's&C's
           </a>
-        </h3>
+        </h4>
       </div>
       <div style={imageContainerStyle}>
         <img
