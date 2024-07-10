@@ -51,7 +51,7 @@ function Home() {
     color: '#007BFF',
   }
 
-  const tourContainerStyle = {
+  const tourContainerStyle: CSSProperties = {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
@@ -62,7 +62,7 @@ function Home() {
     margin: '20px auto',
   }
 
-  const tourTextStyle = {
+  const tourTextStyle: CSSProperties = {
     flex: 1,
     marginRight: '20px',
     backgroundColor: 'white',
