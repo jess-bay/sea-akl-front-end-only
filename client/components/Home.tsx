@@ -1,7 +1,11 @@
 import { CSSProperties } from 'react'
+import { useMediaQuery } from 'react-responsive'
 import { Link } from 'react-router-dom'
 
 function Home() {
+  const isTablet = useMediaQuery({ query: '(max-width: 768px)' })
+  const isMobile = useMediaQuery({ query: '(max-width: 480px)' })
+
   const tourData = [
     {
       name: 'City',
@@ -39,11 +43,11 @@ function Home() {
     backgroundColor: '#007BFF',
     color: '#FFF',
     border: 'none',
-    padding: '10px 20px',
+    padding: isTablet ? '8px 16px' : '10px 20px',
     margin: '5px',
     borderRadius: '5px',
     cursor: 'pointer',
-    fontSize: '2rem',
+    fontSize: isTablet ? '1.5rem' : '2rem',
   }
 
   const linkStyle: CSSProperties = {
@@ -54,27 +58,38 @@ function Home() {
   const tourContainerStyle: CSSProperties = {
     display: 'flex',
     justifyContent: 'space-between',
-    alignItems: 'center',
     padding: '20px',
     backgroundColor: 'rgba(255, 255, 255, 0.5)',
     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-    maxWidth: '50%',
+    maxWidth: isTablet ? '90%' : '50%',
     margin: '20px auto',
+    flexDirection: isTablet ? 'column' : 'row',
+    alignItems: 'center',
   }
 
   const tourTextStyle: CSSProperties = {
     flex: 1,
-    marginRight: '20px',
     backgroundColor: 'rgba(255, 255, 255, 0.8)',
     padding: '1.8%',
+    width: isTablet ? '100%' : 'auto',
+    alignItems: isMobile ? 'left' : 'center',
   }
 
   const headingStyle: CSSProperties = {
     textAlign: 'center',
     borderTop: '4px solid black',
     paddingTop: '10px',
-    maxWidth: '40%',
+    maxWidth: isTablet ? '80%' : '40%',
     margin: '0 auto',
+    fontSize: isMobile ? '2.5rem' : isTablet ? '3rem' : '5rem',
+  }
+
+  const smallHeadingStyle: CSSProperties = {
+    textAlign: 'center',
+    paddingTop: '10px',
+    maxWidth: isTablet ? '80%' : '40%',
+    margin: '0 auto',
+    fontSize: isMobile ? '1.5rem' : isTablet ? '2rem' : '2.5rem',
   }
 
   return (
@@ -87,8 +102,8 @@ function Home() {
         }}
       >
         <div style={tourTextStyle}>
-          <h1>Welcome to Auckland</h1>
-          <h3>The Jewel of the South Pacific</h3>
+          <h1 style={headingStyle}>Welcome to Auckland</h1>
+          <h3 style={smallHeadingStyle}>The Jewel of the South Pacific</h3>
           <p>
             Beyond Auckland's bars and restaurants, shopping & entertainment,
             lies the world famous Tikapa Moana/Hauraki Gulf Marine Park.
