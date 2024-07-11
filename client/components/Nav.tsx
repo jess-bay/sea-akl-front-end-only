@@ -1,5 +1,11 @@
 import { CSSProperties } from 'react'
 import { Link, NavLink } from 'react-router-dom'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {
+  faFacebook,
+  faTiktok,
+  faInstagram,
+} from '@fortawesome/free-brands-svg-icons'
 
 function Nav() {
   const navLinkStyle = {
@@ -65,8 +71,13 @@ function Nav() {
             </Link>
           </li>
           <li>
-            <Link to="/about" style={navLinkStyle} className="nav-link">
-              About/FAQ
+            <Link
+              to="https://book.sea-auckland.nz/card/create"
+              target="_blank"
+              style={navLinkStyle}
+              className="nav-link"
+            >
+              Gift Cards
             </Link>
           </li>
           <li>
@@ -75,13 +86,8 @@ function Nav() {
             </Link>
           </li>
           <li>
-            <Link
-              to="https://book.sea-auckland.nz/card/create"
-              target="_blank"
-              style={navLinkStyle}
-              className="nav-link"
-            >
-              Gift Cards
+            <Link to="/about" style={navLinkStyle} className="nav-link">
+              About/FAQ
             </Link>
           </li>
           <li>
@@ -93,6 +99,21 @@ function Nav() {
             <Link to="/reviews" style={navLinkStyle} className="nav-link">
               Reviews
             </Link>
+          </li>
+          <li style={{ marginRight: '30px' }}>
+            <a href="https://www.tiktok.com/@seaauckland" target="_blank">
+              <FontAwesomeIcon icon={faTiktok} size="2x" color="#000" />
+            </a>
+          </li>
+          <li style={{ marginRight: '30px' }}>
+            <a href="https://www.instagram.com/sea_auckland/" target="_blank">
+              <FontAwesomeIcon icon={faInstagram} size="2x" color="#bc2a8d" />
+            </a>
+          </li>
+          <li style={{ marginRight: '30px' }}>
+            <a href="https://www.facebook.com/sea.auckland/" target="_blank">
+              <FontAwesomeIcon icon={faFacebook} size="2x" color="#3b5998" />
+            </a>
           </li>
         </ul>
       </nav>
