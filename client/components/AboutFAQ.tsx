@@ -103,6 +103,11 @@ function About() {
     margin: '20px auto',
   }
 
+  const imageStyle = {
+    width: '900px',
+    height: 'auto',
+  }
+
   const headingStyle: CSSProperties = {
     textAlign: 'center',
     borderTop: '4px solid black',
@@ -141,6 +146,13 @@ function About() {
             Harbour & Hauraki Gulf
           </p>
         </div>
+        <div>
+          <img
+            src="client/public/purpose.png"
+            alt="Jet Ski On Embankment"
+            style={imageStyle}
+          />
+        </div>
       </div>
       <div style={containerStyle}>
         <div style={textStyle}>
@@ -161,6 +173,13 @@ function About() {
             use of precious time, energy & resources.
           </p>
         </div>
+        <div>
+          <img
+            src="client/public/sustainability.png"
+            alt="Jet Skis Parked"
+            style={imageStyle}
+          />
+        </div>
       </div>
       <div className="faq-section" style={{ padding: '20px' }}>
         <h1 style={headingStyle}>FAQ's</h1>
@@ -169,8 +188,6 @@ function About() {
             key={index}
             className="faq-item"
             style={{
-              border: '1px solid #ccc',
-              borderRadius: '5px',
               maxWidth: '50%',
               margin: '0 auto',
             }}
@@ -183,8 +200,7 @@ function About() {
                 cursor: 'pointer',
                 backgroundColor: '#f7f7f7',
                 fontSize: '2rem',
-                margin: '10px',
-                border: '2px solid blue',
+                border: '4px solid rgba(201, 238, 255, 0.8)',
               }}
             >
               {faq.question}
@@ -197,8 +213,7 @@ function About() {
                 className="faq-answer"
                 style={{
                   padding: '10px',
-                  backgroundColor: '#f7f7f7',
-                  margin: '10px',
+                  backgroundColor: 'rgba(255, 255, 255, 0.7)',
                 }}
               >
                 {faq.answer.map((paragraph, i) => (
