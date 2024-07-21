@@ -8,7 +8,7 @@ function App() {
     display: 'flex',
     flexDirection: 'column',
     minHeight: '100vh',
-    backgroundImage: 'url(client/public/bg.png)',
+    backgroundImage: 'url(client/public/background.png)',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundAttachment: 'fixed',
